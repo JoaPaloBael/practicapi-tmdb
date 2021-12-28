@@ -1,0 +1,51 @@
+/*RECURSOS*/
+/* Reseteo */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Vollkorn:wght@400;600;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* Fuentes
+
+font-family: 'Open Sans', sans-serif; //400, 600, 800
+font-family: 'Vollkorn', serif; //400, 600, 900
+
+*/
+/*SECCIONES*/
+.header {
+  background-color: #30475E;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif; }
+  .header .logo {
+    height: 4rem;
+    margin-left: 2rem; }
+  .header .busqueda {
+    position: relative; }
+    .header .busqueda input {
+      width: 15rem;
+      padding: 0.55rem 1rem;
+      border-radius: 23px;
+      text-align: center; }
+    .header .busqueda button {
+      position: absolute;
+      padding: .5rem .5rem;
+      top: 4px;
+      right: 10px;
+      background-color: #ffffff00;
+      border-style: none;
+      cursor: pointer; }
+  .header .navegacion {
+    list-style: none;
+    display: flex; }
+    .header .navegacion li {
+      margin: 0 15px; }
+    .header .navegacion a {
+      color: #F5F5F5;
+      text-decoration: none; }
+      .header .navegacion a.navegacion--active, .header .navegacion a:hover {
+        font-weight: 800;
+        text-decoration: underline; }

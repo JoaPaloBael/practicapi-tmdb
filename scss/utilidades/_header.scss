@@ -1,0 +1,50 @@
+// @import '../recursos/colores';
+
+.header{
+    background-color: $azul;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+
+    .logo{
+        height: 4rem;
+        margin-left: 2rem;
+    }
+    .busqueda{
+        position: relative;
+        input{
+            width: 15rem;
+            padding: 0.55rem 1rem;
+            border-radius: 23px;
+            text-align: center;
+        }
+        button{
+            position: absolute;
+            padding: .5rem .5rem;
+            top: 4px;
+            right: 10px;
+            background-color: #ffffff00;
+            border-style: none;
+            cursor: pointer;
+        }
+    }
+    .navegacion{
+        list-style: none;
+        display: flex;
+        li{
+            margin: 0 15px;
+        }
+        a{
+            color: $blanco;
+            text-decoration: none;
+
+            &.navegacion--active, &:hover{
+                font-weight: 800;
+                text-decoration: underline;
+            }
+        }
+
+    }
+}
