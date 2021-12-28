@@ -1,50 +1,99 @@
 // @import '../recursos/colores';
 
-.header{
-    background-color: $azul;
-    height: 15vh;
+.header {
+    // background-color: $azul;
+    background: linear-gradient(to bottom, $azul-2, $azul);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     font-family: 'Open Sans', sans-serif;
+    padding: 5px 0px;
 
-    .logo{
+    .logo {
         height: 4rem;
-        margin-left: 2rem;
-    }
-    .busqueda{
-        position: relative;
-        input{
-            width: 15rem;
-            padding: 0.55rem 1rem;
-            border-radius: 23px;
-            text-align: center;
-        }
-        button{
-            position: absolute;
-            padding: .5rem .5rem;
-            top: 4px;
-            right: 10px;
-            background-color: #ffffff00;
-            border-style: none;
-            cursor: pointer;
-        }
-    }
-    .navegacion{
-        list-style: none;
-        display: flex;
-        li{
-            margin: 0 15px;
-        }
-        a{
-            color: $blanco;
-            text-decoration: none;
+        margin: 1rem 1rem 0 1rem;
 
-            &.navegacion--active, &:hover{
-                font-weight: 800;
-                text-decoration: underline;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 55%;
+        justify-content: space-between;
+        margin: 1rem;
+
+        .busqueda {
+            position: relative;
+            margin: 8px 0;
+
+            input {
+                width: 13rem;
+                transition: .3s;
+                padding: 0.55rem 1rem;
+                border-radius: 23px;
+                text-align: center;
+            }
+
+            input:focus {
+                width: 15rem;
+                transition: .3s;
+            }
+
+            button {
+                position: absolute;
+                padding: .5rem .5rem;
+                top: 4px;
+                right: 10px;
+                background-color: #ffffff00;
+                border-style: none;
+                cursor: pointer;
             }
         }
 
+        .navegacion {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin: 13px 0;
+
+            li {
+                margin: 0 15px;
+            }
+
+            a {
+                color: $blanco;
+                text-decoration: none;
+
+                &.navegacion--active,
+                &:hover {
+                    font-weight: 800;
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
     }
+}
+
+@media (min-width: 850px){
+    .header{
+        flex-direction: row;
+        padding: 10px 0px;
+        .logo{
+        margin-left: 2rem;
+        }
+        .navbar{
+            flex-direction: row;
+            .busqueda{
+                button{
+                    top: 4px;
+                    right: 10px;
+                }
+            }
+        }
+    }
+
 }

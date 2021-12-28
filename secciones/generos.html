@@ -7,21 +7,24 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <!-- Estilo CSS -->
-        <link rel="stylesheet" href="./css/estilos.css">
+        <link rel="stylesheet" href="../css/estilos.css">
     <title>Géneros</title>
 </head>
 <body>
-    <header>
-        <a href="../index.html"><img src="https://www.seekpng.com/png/full/86-864463_imperial-popcorn-logo-pop-corn-logo.png" alt=""></a>
-        <form action="./resultados-busqueda.html">
-            <input type="text" placeholder="buscar">
-            <button type="submit"><i class="fas fa-search" type="submit"></i></button>
-        </form>
-        <ul>
-            <li><a href="../index.html">INICIO</a></li>
-            <li><a href="./generos.html">Generos</a></li>
-            <li><a href="./favoritos.html">Favoritos</a></li>
-        </ul>
+    <header class="header">
+        <a href="../index.html"><img class="logo"
+                src="https://www.seekpng.com/png/full/86-864463_imperial-popcorn-logo-pop-corn-logo.png" alt=""></a>
+        <div class="navbar">
+            <form action="./resultados-busqueda.html" class="busqueda">
+                <input type="search" placeholder="Buscar...">
+                <button type="submit"><i class="fas fa-search" type="submit"></i></button>
+            </form>
+            <ul class="navegacion">
+                <li><a href="../index.html" class="navegacion--active">Inicio</a></li>
+                <li><a href="./generos.html">Generos</a></li>
+                <li><a href="./favoritos.html">Favoritos</a></li>
+            </ul>
+        </div>
     </header>
     <main>
         <h1>Géneros</h1>
@@ -50,8 +53,8 @@
             </ul>
         </section>
     </main>
-    <footer>
-        <p>Hecho con <i class="fas fa-heart"></i> by <a href="https://github.com/JoaPaloBael/">Johanna Palo Bael</a></p>
+    <footer class="footer">
+        <p>Hecho con <i class="fas fa-heart"></i> por <a href="https://github.com/JoaPaloBael/">Johanna Palo Bael</a></p>
     </footer>
 </body>
 </html>

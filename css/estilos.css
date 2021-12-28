@@ -14,38 +14,127 @@ font-family: 'Vollkorn', serif; //400, 600, 900
 */
 /*SECCIONES*/
 .header {
-  background-color: #30475E;
-  height: 15vh;
+  background: linear-gradient(to bottom, #213041, #30475E);
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  padding: 5px 0px; }
   .header .logo {
     height: 4rem;
-    margin-left: 2rem; }
-  .header .busqueda {
-    position: relative; }
-    .header .busqueda input {
-      width: 15rem;
-      padding: 0.55rem 1rem;
-      border-radius: 23px;
-      text-align: center; }
-    .header .busqueda button {
-      position: absolute;
-      padding: .5rem .5rem;
-      top: 4px;
-      right: 10px;
-      background-color: #ffffff00;
-      border-style: none;
-      cursor: pointer; }
-  .header .navegacion {
-    list-style: none;
-    display: flex; }
-    .header .navegacion li {
-      margin: 0 15px; }
-    .header .navegacion a {
-      color: #F5F5F5;
+    margin: 1rem 1rem 0 1rem; }
+  .header .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    justify-content: space-between;
+    margin: 1rem; }
+    .header .navbar .busqueda {
+      position: relative;
+      margin: 8px 0; }
+      .header .navbar .busqueda input {
+        width: 13rem;
+        transition: .3s;
+        padding: 0.55rem 1rem;
+        border-radius: 23px;
+        text-align: center; }
+      .header .navbar .busqueda input:focus {
+        width: 15rem;
+        transition: .3s; }
+      .header .navbar .busqueda button {
+        position: absolute;
+        padding: .5rem .5rem;
+        top: 4px;
+        right: 10px;
+        background-color: #ffffff00;
+        border-style: none;
+        cursor: pointer; }
+    .header .navbar .navegacion {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin: 13px 0; }
+      .header .navbar .navegacion li {
+        margin: 0 15px; }
+      .header .navbar .navegacion a {
+        color: #F5F5F5;
+        text-decoration: none; }
+        .header .navbar .navegacion a.navegacion--active, .header .navbar .navegacion a:hover {
+          font-weight: 800;
+          text-decoration: underline; }
+
+@media (min-width: 850px) {
+  .header {
+    flex-direction: row;
+    padding: 10px 0px; }
+    .header .logo {
+      margin-left: 2rem; }
+    .header .navbar {
+      flex-direction: row; }
+      .header .navbar .busqueda button {
+        top: 4px;
+        right: 10px; } }
+
+.main {
+  background-color: #213041;
+  font-family: 'Open Sans', sans-serif;
+  color: white; }
+  .main section {
+    display: flex;
+    flex-direction: column; }
+    .main section h2 {
+      text-align: center;
+      padding: 15px;
+      margin: 10px;
+      font-size: 35px;
+      font-weight: 600; }
+    .main section section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center; }
+      .main section section article {
+        margin: 20px 7px; }
+        .main section section article a {
+          color: white;
+          text-decoration: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          .main section section article a img {
+            width: 170px; }
+          .main section section article a h3 {
+            font-family: 'Vollkorn', serif;
+            font-weight: 600;
+            margin-top: 10px; }
+          .main section section article a:hover {
+            color: #F05454;
+            transition: .5s; }
+
+@media (min-width: 850px) {
+  .main section h2 {
+    text-align: left; } }
+
+.footer {
+  background-color: #30475E;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif; }
+  .footer p {
+    text-align: center;
+    color: #F5F5F5; }
+    .footer p .fas, .footer p .fa-heart {
+      color: #F05454; }
+    .footer p a {
+      color: white;
       text-decoration: none; }
-      .header .navegacion a.navegacion--active, .header .navegacion a:hover {
-        font-weight: 800;
-        text-decoration: underline; }
+      .footer p a:hover {
+        font-weight: 600;
+        color: #F05454;
+        transition: all .3s; }
