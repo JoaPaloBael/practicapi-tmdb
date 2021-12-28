@@ -1,0 +1,46 @@
+.tituloDetalle {
+    padding: 20px 15px;
+    text-align: center;
+}
+.mainDetalle{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img{
+        margin: 10px;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space;
+        text-align: center;
+        p{
+            margin: 5px 0;
+        }
+        button{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 800;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 15px;
+            border-style: none;
+            background-color: $azul;
+            color: $blanco;
+            &:hover{
+                background-color: $rosa;
+            }
+        }
+    }
+}
+
+.sinopsis{
+    h3{
+        margin-left: 15px;
+    }
+    p{
+        margin-left: 15px;
+        max-width: 400px;
+    }
+
+}

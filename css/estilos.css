@@ -80,38 +80,79 @@ font-family: 'Vollkorn', serif; //400, 600, 900
 .main {
   background-color: #213041;
   font-family: 'Open Sans', sans-serif;
-  color: white; }
-  .main section {
+  color: white;
+  min-height: 82vh; }
+  .main .peliculasPopulares,
+  .main .seriesPopulares,
+  .main .peliculasMasVistas,
+  .main .seriesMasVistas,
+  .main .peliculasMejorValoradas,
+  .main .seriesMejorValoradas {
     display: flex;
     flex-direction: column; }
-    .main section h2 {
+    .main .peliculasPopulares h2,
+    .main .seriesPopulares h2,
+    .main .peliculasMasVistas h2,
+    .main .seriesMasVistas h2,
+    .main .peliculasMejorValoradas h2,
+    .main .seriesMejorValoradas h2 {
       text-align: center;
       padding: 15px;
       margin: 10px;
       font-size: 35px;
       font-weight: 600; }
-    .main section section {
+    .main .peliculasPopulares section,
+    .main .seriesPopulares section,
+    .main .peliculasMasVistas section,
+    .main .seriesMasVistas section,
+    .main .peliculasMejorValoradas section,
+    .main .seriesMejorValoradas section {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
       align-items: center; }
-      .main section section article {
+      .main .peliculasPopulares section article,
+      .main .seriesPopulares section article,
+      .main .peliculasMasVistas section article,
+      .main .seriesMasVistas section article,
+      .main .peliculasMejorValoradas section article,
+      .main .seriesMejorValoradas section article {
         margin: 20px 7px; }
-        .main section section article a {
+        .main .peliculasPopulares section article a,
+        .main .seriesPopulares section article a,
+        .main .peliculasMasVistas section article a,
+        .main .seriesMasVistas section article a,
+        .main .peliculasMejorValoradas section article a,
+        .main .seriesMejorValoradas section article a {
           color: white;
           text-decoration: none;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center; }
-          .main section section article a img {
+          .main .peliculasPopulares section article a img,
+          .main .seriesPopulares section article a img,
+          .main .peliculasMasVistas section article a img,
+          .main .seriesMasVistas section article a img,
+          .main .peliculasMejorValoradas section article a img,
+          .main .seriesMejorValoradas section article a img {
             width: 170px; }
-          .main section section article a h3 {
+          .main .peliculasPopulares section article a h3,
+          .main .seriesPopulares section article a h3,
+          .main .peliculasMasVistas section article a h3,
+          .main .seriesMasVistas section article a h3,
+          .main .peliculasMejorValoradas section article a h3,
+          .main .seriesMejorValoradas section article a h3 {
             font-family: 'Vollkorn', serif;
             font-weight: 600;
             margin-top: 10px; }
-          .main section section article a:hover {
+          .main .peliculasPopulares section article a:hover,
+          .main .seriesPopulares section article a:hover,
+          .main .peliculasMasVistas section article a:hover,
+          .main .seriesMasVistas section article a:hover,
+          .main .peliculasMejorValoradas section article a:hover,
+          .main .seriesMejorValoradas section article a:hover {
             color: #F05454;
             transition: .5s; }
 
@@ -119,9 +160,46 @@ font-family: 'Vollkorn', serif; //400, 600, 900
   .main section h2 {
     text-align: left; } }
 
+.tituloDetalle {
+  padding: 20px 15px;
+  text-align: center; }
+
+.mainDetalle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .mainDetalle img {
+    margin: 10px; }
+  .mainDetalle div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space;
+    text-align: center; }
+    .mainDetalle div p {
+      margin: 5px 0; }
+    .mainDetalle div button {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 800;
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 15px;
+      border-style: none;
+      background-color: #30475E;
+      color: #F5F5F5; }
+      .mainDetalle div button:hover {
+        background-color: #F05454; }
+
+.sinopsis h3 {
+  margin-left: 15px; }
+
+.sinopsis p {
+  margin-left: 15px;
+  max-width: 400px; }
+
 .footer {
   background-color: #30475E;
-  height: 7vh;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
