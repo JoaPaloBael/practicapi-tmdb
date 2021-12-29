@@ -166,7 +166,7 @@ font-family: 'Vollkorn', serif; //400, 600, 900
 
 .mainDetalle {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center; }
   .mainDetalle img {
     margin: 10px; }
@@ -191,11 +191,51 @@ font-family: 'Vollkorn', serif; //400, 600, 900
         background-color: #F05454; }
 
 .sinopsis h3 {
-  margin-left: 15px; }
+  margin: 15px 0 15px 15px; }
 
 .sinopsis p {
   margin-left: 15px;
-  max-width: 400px; }
+  max-width: 400px;
+  padding-bottom: 15px; }
+
+@media (min-width: 450px) {
+  .sinopsis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .sinopsis p {
+      max-width: 650px;
+      text-align: center; } }
+
+.sinResultado {
+  font-size: 36px;
+  text-align: center;
+  padding: 40px;
+  display: none; }
+  .sinResultado span {
+    font-weight: 800; }
+
+.conResultado {
+  font-size: 24px;
+  text-align: center;
+  padding: 20px; }
+  .conResultado span {
+    font-weight: 800; }
+
+.resultadoPelicula, .resultadoSerie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px; }
+  .resultadoPelicula h2, .resultadoSerie h2 {
+    padding: 15px; }
+  .resultadoPelicula a, .resultadoSerie a {
+    color: white;
+    text-decoration: none; }
+    .resultadoPelicula a h3, .resultadoSerie a h3 {
+      font-family: 'Vollkorn', serif; }
 
 .footer {
   background-color: #30475E;

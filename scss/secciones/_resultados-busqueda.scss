@@ -1,0 +1,36 @@
+.sinResultado{
+    font-size: 36px;
+    text-align: center;
+    padding: 40px;
+    display: none;
+    span{
+        font-weight: 800;
+    }
+}
+
+.conResultado{
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    span{
+        font-weight: 800;
+    }
+}
+
+.resultadoPelicula, .resultadoSerie{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    h2{
+        padding: 15px;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+        h3{
+            font-family: 'Vollkorn', serif;
+        }
+    }
+}
