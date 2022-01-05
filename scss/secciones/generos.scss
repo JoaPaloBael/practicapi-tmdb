@@ -1,0 +1,21 @@
+.generosPeliculas, .generosSeries{
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style: none;
+        li{
+            background-color: $azul;
+            padding: 10px;
+            border-radius: 15px;
+            margin: 10px;
+            a{
+                color: white;
+                text-decoration: none;
+            }
+            &:hover{
+                background-color: $rosa;
+            }
+        }
+    }
+}

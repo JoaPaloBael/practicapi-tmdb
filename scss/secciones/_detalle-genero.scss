@@ -1,0 +1,19 @@
+.detalleGenero{
+    section{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        article{
+
+            a{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                text-decoration: none;
+
+            }
+        }
+    }
+}

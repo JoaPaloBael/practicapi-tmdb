@@ -26,11 +26,22 @@
     h2{
         padding: 15px;
     }
-    a{
-        color: white;
-        text-decoration: none;
-        h3{
-            font-family: 'Vollkorn', serif;
+    div{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        a{
+            margin: 5px;
+            color: white;
+            text-decoration: none;
+            img{
+                width: 175px;
+            }
+            h3{
+                font-family: 'Vollkorn', serif;
+            }
         }
+
     }
 }

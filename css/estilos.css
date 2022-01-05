@@ -231,11 +231,47 @@ font-family: 'Vollkorn', serif; //400, 600, 900
   padding-bottom: 20px; }
   .resultadoPelicula h2, .resultadoSerie h2 {
     padding: 15px; }
-  .resultadoPelicula a, .resultadoSerie a {
+  .resultadoPelicula div, .resultadoSerie div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; }
+    .resultadoPelicula div a, .resultadoSerie div a {
+      margin: 5px;
+      color: white;
+      text-decoration: none; }
+      .resultadoPelicula div a img, .resultadoSerie div a img {
+        width: 175px; }
+      .resultadoPelicula div a h3, .resultadoSerie div a h3 {
+        font-family: 'Vollkorn', serif; }
+
+.generosPeliculas ul, .generosSeries ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none; }
+  .generosPeliculas ul li, .generosSeries ul li {
+    background-color: #30475E;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px; }
+    .generosPeliculas ul li a, .generosSeries ul li a {
+      color: white;
+      text-decoration: none; }
+    .generosPeliculas ul li:hover, .generosSeries ul li:hover {
+      background-color: #F05454; }
+
+.detalleGenero section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .detalleGenero section article a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-decoration: none; }
-    .resultadoPelicula a h3, .resultadoSerie a h3 {
-      font-family: 'Vollkorn', serif; }
 
 .footer {
   background-color: #30475E;
