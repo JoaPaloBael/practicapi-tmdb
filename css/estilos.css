@@ -1,17 +1,17 @@
+@charset "UTF-8";
 /*RECURSOS*/
-/* Reseteo */
+/* Fuentes
+font-family: 'Open Sans', sans-serif; //400, 600, 800
+font-family: 'Vollkorn', serif; //400, 600, 900
+
+*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Vollkorn:wght@400;600;900&display=swap");
+/* Reseteo */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
-/* Fuentes
-
-font-family: 'Open Sans', sans-serif; //400, 600, 800
-font-family: 'Vollkorn', serif; //400, 600, 900
-
-*/
 /*SECCIONES*/
 .header {
   background: linear-gradient(to bottom, #213041, #30475E);
@@ -87,7 +87,10 @@ font-family: 'Vollkorn', serif; //400, 600, 900
   .main .peliculasMasVistas,
   .main .seriesMasVistas,
   .main .peliculasMejorValoradas,
-  .main .seriesMejorValoradas {
+  .main .seriesMejorValoradas,
+  .main .detalleGenero,
+  .main .peliculasFavoritas,
+  .main .seriesFavoritas {
     display: flex;
     flex-direction: column; }
     .main .peliculasPopulares h2,
@@ -95,7 +98,10 @@ font-family: 'Vollkorn', serif; //400, 600, 900
     .main .peliculasMasVistas h2,
     .main .seriesMasVistas h2,
     .main .peliculasMejorValoradas h2,
-    .main .seriesMejorValoradas h2 {
+    .main .seriesMejorValoradas h2,
+    .main .detalleGenero h2,
+    .main .peliculasFavoritas h2,
+    .main .seriesFavoritas h2 {
       text-align: center;
       padding: 15px;
       margin: 10px;
@@ -106,7 +112,10 @@ font-family: 'Vollkorn', serif; //400, 600, 900
     .main .peliculasMasVistas section,
     .main .seriesMasVistas section,
     .main .peliculasMejorValoradas section,
-    .main .seriesMejorValoradas section {
+    .main .seriesMejorValoradas section,
+    .main .detalleGenero section,
+    .main .peliculasFavoritas section,
+    .main .seriesFavoritas section {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -117,14 +126,20 @@ font-family: 'Vollkorn', serif; //400, 600, 900
       .main .peliculasMasVistas section article,
       .main .seriesMasVistas section article,
       .main .peliculasMejorValoradas section article,
-      .main .seriesMejorValoradas section article {
+      .main .seriesMejorValoradas section article,
+      .main .detalleGenero section article,
+      .main .peliculasFavoritas section article,
+      .main .seriesFavoritas section article {
         margin: 20px 7px; }
         .main .peliculasPopulares section article a,
         .main .seriesPopulares section article a,
         .main .peliculasMasVistas section article a,
         .main .seriesMasVistas section article a,
         .main .peliculasMejorValoradas section article a,
-        .main .seriesMejorValoradas section article a {
+        .main .seriesMejorValoradas section article a,
+        .main .detalleGenero section article a,
+        .main .peliculasFavoritas section article a,
+        .main .seriesFavoritas section article a {
           color: white;
           text-decoration: none;
           display: flex;
@@ -136,14 +151,20 @@ font-family: 'Vollkorn', serif; //400, 600, 900
           .main .peliculasMasVistas section article a img,
           .main .seriesMasVistas section article a img,
           .main .peliculasMejorValoradas section article a img,
-          .main .seriesMejorValoradas section article a img {
+          .main .seriesMejorValoradas section article a img,
+          .main .detalleGenero section article a img,
+          .main .peliculasFavoritas section article a img,
+          .main .seriesFavoritas section article a img {
             width: 170px; }
           .main .peliculasPopulares section article a h3,
           .main .seriesPopulares section article a h3,
           .main .peliculasMasVistas section article a h3,
           .main .seriesMasVistas section article a h3,
           .main .peliculasMejorValoradas section article a h3,
-          .main .seriesMejorValoradas section article a h3 {
+          .main .seriesMejorValoradas section article a h3,
+          .main .detalleGenero section article a h3,
+          .main .peliculasFavoritas section article a h3,
+          .main .seriesFavoritas section article a h3 {
             font-family: 'Vollkorn', serif;
             font-weight: 600;
             margin-top: 10px; }
@@ -152,7 +173,10 @@ font-family: 'Vollkorn', serif; //400, 600, 900
           .main .peliculasMasVistas section article a:hover,
           .main .seriesMasVistas section article a:hover,
           .main .peliculasMejorValoradas section article a:hover,
-          .main .seriesMejorValoradas section article a:hover {
+          .main .seriesMejorValoradas section article a:hover,
+          .main .detalleGenero section article a:hover,
+          .main .peliculasFavoritas section article a:hover,
+          .main .seriesFavoritas section article a:hover {
             color: #F05454;
             transition: .5s; }
 
@@ -245,33 +269,54 @@ font-family: 'Vollkorn', serif; //400, 600, 900
       .resultadoPelicula div a h3, .resultadoSerie div a h3 {
         font-family: 'Vollkorn', serif; }
 
-.generosPeliculas ul, .generosSeries ul {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  list-style: none; }
-  .generosPeliculas ul li, .generosSeries ul li {
-    background-color: #30475E;
-    padding: 10px;
-    border-radius: 15px;
-    margin: 10px; }
-    .generosPeliculas ul li a, .generosSeries ul li a {
-      color: white;
-      text-decoration: none; }
-    .generosPeliculas ul li:hover, .generosSeries ul li:hover {
-      background-color: #F05454; }
+.tituloGeneros {
+  text-align: center;
+  padding-top: 20px;
+  font-weight: 800; }
 
-.detalleGenero section {
+.generosPeliculas, .generosSeries {
+  padding: 30px;
   display: flex;
-  justify-content: space-around;
-  align-items: center; }
-  .detalleGenero section article a {
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column; }
+  .generosPeliculas p, .generosSeries p {
+    font-size: 30px; }
+  .generosPeliculas ul, .generosSeries ul {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    color: white;
-    text-decoration: none; }
+    list-style: none;
+    justify-content: center; }
+    .generosPeliculas ul li, .generosSeries ul li {
+      background-color: #30475E;
+      padding: 10px;
+      border-radius: 15px;
+      margin: 10px; }
+      .generosPeliculas ul li a, .generosSeries ul li a {
+        color: white;
+        text-decoration: none; }
+      .generosPeliculas ul li:hover, .generosSeries ul li:hover {
+        background-color: #F05454; }
+
+@media (min-width: 850px) {
+  .generosPeliculas, .generosSeries {
+    height: 40vh; } }
+
+/*Reutilización de clases en index.scss*/
+.detalleGeneros h1 {
+  text-align: center; }
+
+/*Reutilización de clases en index.scss*/
+.detalleGeneros h1 {
+  text-align: center; }
+
+/*Reutilizacion de clases en index.scss*/
+.favoritos h1, .favoritos p {
+  text-align: center; }
+
+.favoritos h1 {
+  margin-bottom: 10px; }
 
 .footer {
   background-color: #30475E;

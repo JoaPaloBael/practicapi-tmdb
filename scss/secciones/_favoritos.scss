@@ -1,0 +1,10 @@
+/*Reutilizacion de clases en index.scss*/
+
+.favoritos{
+    h1, p{
+        text-align: center;
+    }
+    h1{
+        margin-bottom: 10px;
+    }
+}

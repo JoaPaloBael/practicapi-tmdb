@@ -1,8 +1,8 @@
 
 /*RECURSOS*/
-@import './recursos/reseteo.scss';
-@import './recursos/tipografia.scss';
 @import './recursos/colores';
+@import './recursos/tipografia';
+@import './recursos/reseteo';
 
 /*SECCIONES*/
 @import './utilidades/header.scss';
@@ -11,5 +11,8 @@
 @import './secciones/resultados-busqueda';
 @import './secciones/generos.scss';
 @import './secciones/detalle-genero';
+@import './secciones/detalle-genero';
+@import './secciones/favoritos';
+
 
 @import './utilidades/footer';

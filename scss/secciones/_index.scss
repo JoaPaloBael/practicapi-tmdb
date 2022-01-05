@@ -9,7 +9,10 @@
     .peliculasMasVistas,
     .seriesMasVistas,
     .peliculasMejorValoradas,
-    .seriesMejorValoradas {
+    .seriesMejorValoradas,
+    .detalleGenero,
+    .peliculasFavoritas,
+    .seriesFavoritas {
         display: flex;
         flex-direction: column;
 

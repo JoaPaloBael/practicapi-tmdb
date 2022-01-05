@@ -1,19 +1,7 @@
-.detalleGenero{
-    section{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        article{
+/*Reutilización de clases en index.scss*/
 
-            a{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                color: white;
-                text-decoration: none;
-
-            }
-        }
+.detalleGeneros{
+    h1{
+        text-align: center;
     }
 }
