@@ -324,10 +324,19 @@ font-family: 'Vollkorn', serif; //400, 600, 900
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg");
+  background-repeat: no-repeat;
+  background-size: 8rem;
+  background-position: 10px 10px; }
+  .footer div {
+    background-color: #2425259d;
+    height: 10vh;
+    width: 100%; }
   .footer p {
     text-align: center;
-    color: #F5F5F5; }
+    color: #F5F5F5;
+    padding: 20px  10px; }
     .footer p .fas, .footer p .fa-heart {
       color: #F05454; }
     .footer p a {

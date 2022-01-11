@@ -5,19 +5,29 @@
     justify-content: center;
     align-items: center;
     font-family: 'Open Sans', sans-serif;
-    p{
-        text-align: center;
-        color: $blanco;
-        .fas, .fa-heart{
-            color: $rosa;
-        }
-        a{
-            color: white;
-            text-decoration: none;
-            &:hover{
-                font-weight: 600;
+    background-image: url('https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg');
+    background-repeat: no-repeat;
+    background-size: 8rem;
+    background-position: 10px 10px;
+    div{
+        background-color: #2425259d;
+        height: 10vh;
+        width: 100%;
+    }
+        p{
+            text-align: center;
+            color: $blanco;
+            padding: 20px  10px;
+            .fas, .fa-heart{
                 color: $rosa;
-                transition: all .3s;
+            }
+            a{
+                color: white;
+                text-decoration: none;
+                &:hover{
+                    font-weight: 600;
+                    color: $rosa;
+                    transition: all .3s;
             }
         }
     }
