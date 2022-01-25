@@ -84,8 +84,8 @@ font-family: 'Vollkorn', serif; //400, 600, 900
   min-height: 82vh; }
   .main .peliculasPopulares,
   .main .seriesPopulares,
-  .main .peliculasMasVistas,
-  .main .seriesMasVistas,
+  .main .proximasPeliculas,
+  .main .ultimasSeries,
   .main .peliculasMejorValoradas,
   .main .seriesMejorValoradas,
   .main .detalleGenero,
@@ -95,8 +95,8 @@ font-family: 'Vollkorn', serif; //400, 600, 900
     flex-direction: column; }
     .main .peliculasPopulares h2,
     .main .seriesPopulares h2,
-    .main .peliculasMasVistas h2,
-    .main .seriesMasVistas h2,
+    .main .proximasPeliculas h2,
+    .main .ultimasSeries h2,
     .main .peliculasMejorValoradas h2,
     .main .seriesMejorValoradas h2,
     .main .detalleGenero h2,
@@ -109,8 +109,8 @@ font-family: 'Vollkorn', serif; //400, 600, 900
       font-weight: 600; }
     .main .peliculasPopulares section,
     .main .seriesPopulares section,
-    .main .peliculasMasVistas section,
-    .main .seriesMasVistas section,
+    .main .proximasPeliculas section,
+    .main .ultimasSeries section,
     .main .peliculasMejorValoradas section,
     .main .seriesMejorValoradas section,
     .main .detalleGenero section,
@@ -120,11 +120,12 @@ font-family: 'Vollkorn', serif; //400, 600, 900
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
-      align-items: center; }
+      align-items: center;
+      align-items: flex-start; }
       .main .peliculasPopulares section article,
       .main .seriesPopulares section article,
-      .main .peliculasMasVistas section article,
-      .main .seriesMasVistas section article,
+      .main .proximasPeliculas section article,
+      .main .ultimasSeries section article,
       .main .peliculasMejorValoradas section article,
       .main .seriesMejorValoradas section article,
       .main .detalleGenero section article,
@@ -133,8 +134,8 @@ font-family: 'Vollkorn', serif; //400, 600, 900
         margin: 20px 7px; }
         .main .peliculasPopulares section article a,
         .main .seriesPopulares section article a,
-        .main .peliculasMasVistas section article a,
-        .main .seriesMasVistas section article a,
+        .main .proximasPeliculas section article a,
+        .main .ultimasSeries section article a,
         .main .peliculasMejorValoradas section article a,
         .main .seriesMejorValoradas section article a,
         .main .detalleGenero section article a,
@@ -148,8 +149,8 @@ font-family: 'Vollkorn', serif; //400, 600, 900
           align-items: center; }
           .main .peliculasPopulares section article a img,
           .main .seriesPopulares section article a img,
-          .main .peliculasMasVistas section article a img,
-          .main .seriesMasVistas section article a img,
+          .main .proximasPeliculas section article a img,
+          .main .ultimasSeries section article a img,
           .main .peliculasMejorValoradas section article a img,
           .main .seriesMejorValoradas section article a img,
           .main .detalleGenero section article a img,
@@ -158,8 +159,8 @@ font-family: 'Vollkorn', serif; //400, 600, 900
             width: 170px; }
           .main .peliculasPopulares section article a h3,
           .main .seriesPopulares section article a h3,
-          .main .peliculasMasVistas section article a h3,
-          .main .seriesMasVistas section article a h3,
+          .main .proximasPeliculas section article a h3,
+          .main .ultimasSeries section article a h3,
           .main .peliculasMejorValoradas section article a h3,
           .main .seriesMejorValoradas section article a h3,
           .main .detalleGenero section article a h3,
@@ -167,11 +168,13 @@ font-family: 'Vollkorn', serif; //400, 600, 900
           .main .seriesFavoritas section article a h3 {
             font-family: 'Vollkorn', serif;
             font-weight: 600;
-            margin-top: 10px; }
+            margin-top: 10px;
+            text-align: center;
+            width: 200px; }
           .main .peliculasPopulares section article a:hover,
           .main .seriesPopulares section article a:hover,
-          .main .peliculasMasVistas section article a:hover,
-          .main .seriesMasVistas section article a:hover,
+          .main .proximasPeliculas section article a:hover,
+          .main .ultimasSeries section article a:hover,
           .main .peliculasMejorValoradas section article a:hover,
           .main .seriesMejorValoradas section article a:hover,
           .main .detalleGenero section article a:hover,

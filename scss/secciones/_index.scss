@@ -6,8 +6,8 @@
 
     .peliculasPopulares,
     .seriesPopulares,
-    .peliculasMasVistas,
-    .seriesMasVistas,
+    .proximasPeliculas,
+    .ultimasSeries,
     .peliculasMejorValoradas,
     .seriesMejorValoradas,
     .detalleGenero,
@@ -30,6 +30,7 @@
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
+            align-items: flex-start;
 
             article {
                 margin: 20px 7px;
@@ -51,6 +52,8 @@
                         font-family: 'Vollkorn', serif;
                         font-weight: 600;
                         margin-top: 10px;
+                        text-align: center;
+                        width: 200px;
                     }
 
                     &:hover {
