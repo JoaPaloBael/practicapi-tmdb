@@ -6,10 +6,10 @@ const urlPelisMejorValoradas = `https://api.themoviedb.org/3/movie/top_rated?api
 const urlSeriesMejorValoradas = `https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}&language=en`;
 
 const urlPelisProximas = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en`;
-const urlUltimasSeries = `https://api.themoviedb.org/3/tv/latest?api_key=${apiKey}&language=en`;
+const urlUltimasSeries = `https://api.themoviedb.org/3/tv/on_the_air?api_key=${apiKey}&language=en`;
 
 /*Peliculas Populares*/
-
+console.log("/*Peliculas Populares*/");
 fetch(urlPelisPopulares)
     .then(function (response) {
         return response.json();
@@ -38,7 +38,9 @@ fetch(urlPelisPopulares)
         console.log(error);
     })
 
+
 /*Series Populares*/
+console.log("/*Series Populares*/");
 fetch(urlSeriesPopulares)
     .then(function (response) {
         return response.json();
@@ -67,6 +69,7 @@ fetch(urlSeriesPopulares)
     })
 
 /*Peliculas mejor valoradas*/
+console.log("/*Peliculas mejor valoradas*/")
 fetch (urlPelisMejorValoradas)
     .then (function(response){
         return response.json();
@@ -79,7 +82,7 @@ fetch (urlPelisMejorValoradas)
         for (i = 0; i < 6; i++) {
             listaPelisMejorValoradas.innerHTML +=
                 `<article>
-                <a href="./secciones/detalle-serie.html">
+                <a href="./secciones/detalle-pelicula.html">
                     <img src="https://image.tmdb.org/t/p/original/${info[i].poster_path}"
                         alt="">
                     <h3>${info[i].title}</h3>
@@ -115,8 +118,63 @@ fetch (urlSeriesMejorValoradas)
                     <p>Valoración: <span>${info[i].vote_average}</span></p>
                 </a>
             </article>`
+        }
+
+    })
+    .catch(function(error){
+        console.log(error);
+    })
 
 
+    /*Proximas Peliculas*/
+    fetch (urlPelisProximas)
+    .then (function(response){
+        return response.json();
+    })
+    .then (function(data){
+        let info = data.results;
+        console.log(info);
+        let listaProximasPeliculas = document.querySelector('.listaProximasPeliculas');
+
+        for (i = 0; i < 6; i++) {
+            listaProximasPeliculas.innerHTML +=
+                `<article>
+                <a href="./secciones/detalle-pelicula.html">
+                    <img src="https://image.tmdb.org/t/p/original/${info[i].poster_path}" alt="">
+
+                    <h3>${info[i].title}</h3>
+                    <p>Fecha de estreno: <span>${info[i].release_date.split('-').reverse().join('/')}</span></p>
+                </a>
+            </article>`
+
+
+        }
+
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+
+
+    /*Ultimos capitulos Series*/
+    fetch (urlUltimasSeries)
+    .then (function(response){
+        return response.json();
+    })
+    .then (function(data){
+        let info = data.results;
+        console.log(info);
+        let listaUltimasSeries = document.querySelector('.listaUltimasSeries');
+
+        for (i = 0; i < 6; i++) {
+            listaUltimasSeries.innerHTML +=
+                `<article>
+                <a href="./secciones/detalle-serie.html">
+                    <img src="https://image.tmdb.org/t/p/original/${info[i].poster_path}" alt="">
+                    <h3>${info[i].name}</h3>
+                    <p>Primer episodio:<span>${info[i].first_air_date.split('-').reverse().join('/')}</span></p>
+                </a>
+            </article>`
         }
 
     })
